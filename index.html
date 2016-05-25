@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header" data-theme="b">
+		<h1><img src="cuartoB/op.jpg" width="224" height="224"> </h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">REALIZA TUS OPERACIONES</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>CuartoB</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2" data-theme="b">
+	<div data-role="header" data-theme="b">
+		<h1> OPERACIONES ARIDMETICAS BASICAS</h1>
+	</div>
+	<div data-role="content">	
+		</head>
+
+<title>Calculadora básica
+</title>
+<script>
+function calcula(operacion){
+var operando1 = document.calc.operando1.value
+var operando2 = document.calc.operando2.value
+var result = eval(operando1 + operacion + operando2)
+document.calc.resultado.value = result
+}
+function margen(operacion){
+var operando1 = document.calc.operando1.value
+var operando2 = document.calc.operando2.value
+var result = eval(operando1 + operacion + (1-(operando2/100)))
+document.calc.resultado.value = result
+}
+</script>
+
+</head>
+<center><body ><fieldset>
+<form name="calc">
+  No.1 <input type="Text" name="operando1" value=" " size="12">
+<br>
+  No.2 <input type="Text" name="operando2" value=" " size="12">
+<br>
+<input type="Button" name="mas" value=" Suma " onclick="calcula('+')">
+<input type="Button" name="menos" value=" Resta " onclick="calcula('-')">
+<input type="Button" name="por" value=" Multiplicacion " onclick="calcula('*')">
+<input type="Button" name="divide" value=" Divicion " onclick="calcula('/')">
+<br>
+<center>RESULTADO:</center>
+<input type="Text" name="resultado" value="" size="12">
+</form>
+</body> </fieldset><div>		
+	</div>
+	<div data-role="footer" data-theme="b">
+		<h4>CuartoB</h4>
+	</div>
+</div>
+</body>
+</html>
